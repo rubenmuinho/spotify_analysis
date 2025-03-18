@@ -1,0 +1,34 @@
+FALTA:
+MInutos totales de escucha
+Calcular el porcentaje de afinidad entre una canción o grupo y los gustos del usuario
+Generar recomendaciones personalizadas de canciones o artistas similares
+	Utilizando características de las canciones (tempo, energía, danzabilidad, etc tengo q mirar q datos m dan)
+	Luego buscar esas canciones con características similares
+Días/horas de mayor reproducción (días de la semana y horas del día)
+Serie temporal para analizar que género era mi favorito dependiendo de la época (es muy buena esa para hacer análisis
+de poblaciones y así)
+
+IDEAS MÁS RARAS:
+Género favorito en el sentido de tempo y energía (me gustan más las chill, las animadas)
+que tipo de género me gusta dependiendo de la hora del día
+
+
+
+No entiendo esto pero tengo que usar el endpoint de recomendaciones de la API de Spotify
+
+Elegir un modelo según el objetivo:
+
+Regresión lineal: Predecir el número de reproducciones en función de las características.
+
+Clasificación: Determinar si una canción es “popular” o no.
+
+Dividir los datos en entrenamiento y prueba.
+
+Evaluar el modelo con métricas (RMSE, accuracy, etc.).
+
+
+Estaría guay crear una IA o algo que te hiciera como un resumen de los datos, mostrar los datos
+de una mejor manera como hace spotify
+
+
+DOCUMENTAR EL ANÁLISIS Y COMO SE HA HECHO EL PROYECTO 
