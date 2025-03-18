@@ -3,10 +3,10 @@ import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 
 def authenticate_spotify():
-    # Autenticar usuario de Spotify
-    if os.path.exists('.cache'):
-        os.remove('.cache')
-        print("✅ Caché eliminada. Inicia sesión con una nueva cuenta.")
+    # # Autenticar usuario de Spotify
+    # if os.path.exists('.cache'):
+    #     os.remove('.cache')
+    #     print("Caché eliminada. Inicia sesión con una nueva cuenta.")
 
     CLIENT_ID = '831c19eb66b34d0a8810422ad1585a93'
     CLIENT_SECRET = 'bbbf5e44f1aa48cf894049e0fce4ae69'
