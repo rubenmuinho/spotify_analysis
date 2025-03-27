@@ -3,24 +3,30 @@ import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 
 def authenticate_spotify():
-    # # Autenticar usuario de Spotify
-    # if os.path.exists('.cache'):
-    #     os.remove('.cache')
-    #     print("Caché eliminada. Inicia sesión con una nueva cuenta.")
+    # Autenticar usuario de Spotify
+    if os.path.exists('.cache'):
+        os.remove('.cache')
+        print("Caché eliminada. Inicia sesión con una nueva cuenta.")
 
-    CLIENT_ID = '831c19eb66b34d0a8810422ad1585a93'
-    CLIENT_SECRET = 'bbbf5e44f1aa48cf894049e0fce4ae69'
+    CLIENT_ID = 'c627dabc5f5f4682b854c73978f25b1a'
+    CLIENT_SECRET = 'b433692d52d84aa5a30f7344f177b77a'
     REDIRECT_URI = 'http://127.0.0.1:8888/callback'
 
     sp = spotipy.Spotify(auth_manager=SpotifyOAuth(
         client_id=CLIENT_ID,
         client_secret=CLIENT_SECRET,
         redirect_uri=REDIRECT_URI,
-        scope="user-top-read"
+        scope="user-top-read user-library-read playlist-read-private playlist-read-collaborative", 
+        cache_path=".cache"
     ))
 
-    user = sp.current_user()
-    print(f"¡Autenticado como: {user['display_name']}!")
+    try:
+        user = sp.current_user()
+        print(f"¡Autenticado como: {user['display_name']}!")
+    except spotipy.exceptions.SpotifyException as e:
+        print(f"Error al autenticar usuario de Spotify: {e}")
+        return None  
+    
     return sp
 
 def get_top_artists(sp, limit, time_range='medium_term'):
